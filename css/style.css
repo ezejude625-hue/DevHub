@@ -651,13 +651,6 @@ button {
 /* Small screens */
 
 @media (max-width: 640px) {
-
-    /* Header */
-    .header {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
     /* Hero section */
     .hero__section {
         flex-direction: column;
@@ -742,72 +735,6 @@ button {
 }
 
 /* Tablet Devices */
-
-@media (max-width: 1100px) {
-    .header {
-        position: sticky;
-        flex-wrap: wrap;
-    }
-
-    .header .navbar {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-        margin-left: 0;
-        padding: 1rem 2rem 1.5rem;
-        border-bottom: 2px solid var(--borders);
-        background: var(--surface);
-        box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
-    }
-
-    .header .nav__link__cover {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.5rem;
-        padding: 0;
-        margin-right: 0;
-    }
-
-    .header .nav__link__cover .nav__link {
-        display: block;
-        padding: 0.75rem;
-    }
-
-    .header .navbar__cta {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.75rem;
-    }
-
-    .header .navbar__cta .nav__input__cover {
-        display: block;
-    }
-
-    .header .navbar__cta .nav__input,
-    .header .navbar__cta .nav__cta__btn {
-        width: 100%;
-    }
-
-    .header .menu__btn__container {
-        display: block;
-    }
-
-    .mobile__menu__btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header.header--menu-open .navbar {
-        display: flex;
-    }
-}
 
 @media (min-width: 641px) and (max-width: 900px) {
     .trustBar__section {
