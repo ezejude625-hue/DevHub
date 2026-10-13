@@ -256,7 +256,7 @@ button {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: center;
-    gap: 1rem;
+    gap: 0;
     border: 2px solid var(--borders);
     background: var(--surface);
     padding: 1rem;
@@ -265,33 +265,39 @@ button {
 }
 
 .trustBar__stat {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2.75rem 9rem;
     align-items: center;
-    justify-content: flex-start;
-    gap: clamp(0.5rem, 1.5vw, 1.5rem);
+    justify-content: center;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
     border-right: 2px solid var(--borders);
-    padding-right: 0.75rem;
+    padding-inline: clamp(0.5rem, 1.25vw, 1.25rem);
     min-width: 0;
 }
 
 .trustBar__stat:last-child {
     border-right: none;
-    padding-right: 0;
 }
 
 .stat__icon {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
     font-size: 1.5rem;
     background: var(--borders);
-    padding: 0.6rem;
     border-radius: 1rem;
 }
 
 .stat__text {
     color: var(--secondary_text);
+    font-size: 0.875rem;
+    line-height: 1.35;
+    min-width: 0;
 }
 
 .stat__text__num {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
     color: var(--main_text);
 }
 
@@ -697,17 +703,25 @@ button {
     .trustBar__section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         margin-block: 2.5rem;
-        gap: 1rem;
+        gap: 0;
     }
 
     .trustBar__stat {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        justify-content: stretch;
+        gap: 0.5rem;
         border-right: none;
-        padding-right: 0;
+        padding: 0.75rem 0.5rem;
     }
 
     .stat__icon {
+        width: 2.5rem;
+        height: 2.5rem;
         font-size: 1.2rem;
-        padding: 0.5rem;
+    }
+
+    .stat__text {
+        font-size: clamp(0.68rem, 2vw, 0.8rem);
     }
 
     .stat__text__num {
@@ -767,11 +781,6 @@ button {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .trustBar__stat {
-        border-right: none;
-        padding-right: 0;
-    }
-
     .cta__section {
         align-items: flex-start;
         flex-direction: column;
@@ -781,5 +790,34 @@ button {
 @media (max-width: 380px) {
     .trustBar__section {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .trustBar__stat {
+        grid-template-columns: 2.75rem minmax(0, 1fr);
+        justify-content: flex-start;
+        border-right: none;
+        border-bottom: 1px solid var(--borders);
+        padding: 0.75rem 0.5rem;
+    }
+
+    .trustBar__stat:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 381px) and (max-width: 900px) {
+    .trustBar__stat {
+        grid-template-columns: 2.75rem minmax(0, 1fr);
+        justify-content: stretch;
+        border-right: none;
+        padding: 0.75rem clamp(0.5rem, 1.25vw, 0.75rem);
+    }
+
+    .trustBar__stat:nth-child(odd) {
+        border-right: 1px solid var(--borders);
+    }
+
+    .trustBar__stat:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--borders);
     }
 }
