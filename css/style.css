@@ -14,23 +14,32 @@
     --card_hover: #16231F;
     --primary: #00fa9a;
     --primary_dark: #00c77b;
+    --primary_soft: rgb(0 250 154 / 12%);
     --secondary_accent: #22D3EE;
+    --secondary_accent_soft: rgb(34 211 238 / 12%);
     --purple_accent: #8B5CF6;
+    --purple_accent_soft: rgb(139 92 246 / 12%);
     --main_text: #F1F5F3;
     --secondary_text: #94A3A0;
     --borders: #1E302A;
     --error: #EF4444;
     --warning: #F59E0B;
+    --warning_soft: rgb(245 158 11 / 12%);
 }
 
 html {
     font-size: 16px;
 }
 
+html:not(.aos-enabled) [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 body {
     font-family: "Jetbrains Mono";
     /* font-family: 'Inter', sans-serif; */
-    background: var(--surface);
+    background: var(--background);
     color: var(--main_text);
     min-height: 100vh;
     display: flex;
@@ -200,7 +209,7 @@ button {
     color: var(--primary);
     border: 1px solid var(--primary);
     border-radius: 100px;
-    background: rgba(0, 250, 154, 0.158);
+    background: var(--primary_soft);
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     font-size: smaller;
@@ -249,6 +258,7 @@ button {
     align-items: center;
     gap: 1rem;
     border: 2px solid var(--borders);
+    background: var(--surface);
     padding: 1rem;
     margin: 4rem clamp(1rem, 4vw, 2rem);
     border-radius: 0.8rem;
@@ -317,7 +327,14 @@ button {
 .howItWorks__card__cover {
     border: 1px solid var(--borders);
     border-radius: 0.5rem;
+    background: var(--cards);
     padding: 1.8rem;
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.howItWorks__card__cover:hover {
+    background: var(--card_hover);
+    border-color: var(--primary_dark);
 }
 
 .howItWorks__card__desc {
@@ -420,7 +437,14 @@ button {
         & .featuredDev__card {
             border: 1px solid var(--borders);
             border-radius: 0.5rem;
+            background: var(--cards);
             padding: 1rem;
+            transition: background-color 180ms ease, border-color 180ms ease;
+
+            &:hover {
+                background: var(--card_hover);
+                border-color: var(--primary_dark);
+            }
 
             & .featuredDev__firstLayer {
                 display: flex;
@@ -481,31 +505,31 @@ button {
                     & .lang__purple {
                         color: var(--purple_accent);
                         border: 1px solid var(--purple_accent);
-                        background: rgba(138, 92, 246, 0.151);
+                        background: var(--purple_accent_soft);
                     }
 
                     & .lang__yellow {
                         color: var(--warning);
                         border: 1px solid var(--warning);
-                        background: rgba(245, 159, 11, 0.137);
+                        background: var(--warning_soft);
                     }
 
                     & .lang__emerald {
                         color: var(--primary);
                         border: 1px solid var(--primary);
-                        background: rgba(0, 250, 154, 0.158);
+                        background: var(--primary_soft);
                     }
 
                     & .lang__accent {
                         color: var(--secondary_accent);
                         border: 1px solid var(--secondary_accent);
-                        background: rgba(34, 211, 238, 0.137);
+                        background: var(--secondary_accent_soft);
                     }
 
                     & .lang__type {
-                        color: #1e90ff;
-                        border: 1px solid #1e90ff;
-                        background: rgba(30, 143, 255, 0.151);
+                        color: var(--secondary_accent);
+                        border: 1px solid var(--secondary_accent);
+                        background: var(--secondary_accent_soft);
                     }
                 }
             }
@@ -576,6 +600,7 @@ button {
     margin: 3rem clamp(1rem, 4vw, 2rem);
     border: 1px solid var(--borders);
     border-radius: 0.5rem;
+    background: var(--cards);
     padding: 1.5rem;
 }
 
@@ -613,6 +638,7 @@ button {
     gap: 1.8rem;
     padding: clamp(1.5rem, 4vw, 2.5rem);
     border-top: 2px solid var(--borders);
+    background: var(--surface);
     line-height: 1.8;
 
     & .footer__desc__text,
