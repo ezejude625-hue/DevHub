@@ -47,6 +47,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.6rem 2rem;
+    z-index: 10;
     user-select: none;
     border-bottom: 2px solid var(--borders);
     background: var(--surface);
@@ -58,7 +59,7 @@ body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        gap: 6rem;
+        gap: clamp(0.75rem, 1.5vw, 1.5rem);
         padding: 1rem;
         list-style: none;
 
@@ -87,10 +88,11 @@ body {
     & .navbar__cta {
         display: flex;
         justify-content: space-between;
-        gap: 2rem;
+        gap: 1rem;
         align-items: center;
 
         & .nav__input {
+            width: clamp(10rem, 18vw, 16rem);
             background-color: transparent;
             border: 2px solid var(--borders);
             border-radius: 0.5rem;
@@ -119,6 +121,33 @@ body {
             padding: 0.8rem;
         }
     }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.mobile__menu__btn {
+    display: none;
+    border: 2px solid var(--primary_dark);
+    border-radius: 0.6rem;
+    background: transparent;
+    color: var(--main_text);
+    padding: 0.4rem;
+    font-size: 1.6rem;
+}
+
+button,
+input {
+    font-family: "Jetbrains Mono";
+}
+
+button {
+    cursor: pointer;
 }
 
 /* main */

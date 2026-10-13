@@ -3,11 +3,28 @@
 const initApp = () => {
   //  The DOM
 
-  const menu = document.getElementById("menu");
+  const header = document.querySelector(".header");
+  const navbar = document.getElementById("siteNavbar");
   const menuBtn = document.getElementById("menuBtn");
+  const menuIcon = menuBtn.querySelector("i");
 
   menuBtn.addEventListener("click", () => {
-    menu.classList.add("menu__open");
+    const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+
+    header.classList.toggle("header--menu-open", !isOpen);
+    menuBtn.setAttribute("aria-expanded", String(!isOpen));
+    menuBtn.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+    menuIcon.classList.toggle("fa-bars", isOpen);
+    menuIcon.classList.toggle("fa-xmark", !isOpen);
+  });
+
+  navbar.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("header--menu-open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Open navigation");
+      menuIcon.classList.replace("fa-xmark", "fa-bars");
+    });
   });
 };
 
