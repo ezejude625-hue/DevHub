@@ -8,6 +8,7 @@ const initApp = () => {
   const menuBtn = document.getElementById("menuBtn");
   const menuIcon = menuBtn.querySelector("i");
   const mobileNav = window.matchMedia("(max-width: 1100px)");
+  const navInput = document.getElementById("navInput");
 
   const closeMenu = () => {
     header.classList.remove("header--menu-open");
@@ -35,7 +36,10 @@ const initApp = () => {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") {
+    if (
+      event.key === "Escape" &&
+      menuBtn.getAttribute("aria-expanded") === "true"
+    ) {
       closeMenu();
       menuBtn.focus();
     }
@@ -43,6 +47,13 @@ const initApp = () => {
 
   mobileNav.addEventListener("change", (event) => {
     if (!event.matches) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== navInput) {
+      event.preventDefault();
+      navInput.focus();
+    }
   });
 };
 

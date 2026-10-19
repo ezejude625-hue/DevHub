@@ -4,144 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevHub - About Page</title>
+    <title>DevHub - About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e71321a315.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/responsive-pages.css">
 </head>
 
 <body>
-    <!-- Header Section -->
     <header class="header">
-        <div class="logo">
-            <h2 class="logo__heading"><i class="fa-solid fa-code emerald"></i> Dev<span
-                    class="logo__heading__span">Hub</span>
-            </h2>
-        </div>
-        <nav class="navbar" id="siteNavbar">
-            <ul class="nav__link__cover">
-                <li><a href="index.html" class="nav__link">Home</a></li>
-                <li><a href="developer.html" class="nav__link">Developers</a></li>
-                <li><a href="about.html" class="nav__link active__nav__link">About</a></li>
-            </ul>
-            <div class="navbar__cta">
-                <span class="nav__input__cover">
-                    <input class="nav__input" type="text" name="search" id="navInput"
-                        placeholder="Search developers...">
-                </span>
-                <button class="nav__cta__btn"><i class="fa-solid fa-box"></i> Get Random Developer</button>
+        <div class="shell header-shell">
+            <div class="logo">
+                <span class="logo-mark">&lt;/&gt;</span>
+                <span class="logo-word">Dev<span class="logo-accent">Hub</span></span>
             </div>
-        </nav>
-        <div class="menu__btn__container">
-            <button class="mobile__menu__btn" id="menuBtn" type="button" aria-label="Open navigation"
-                aria-controls="siteNavbar" aria-expanded="false">
-                <i class="fa-solid fa-bars" aria-hidden="true"></i>
-            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="developer.html">Developers</a>
+                <a href="about.html" class="active">About</a>
+            </nav>
+
+            <div class="header-actions">
+                <label class="search-box" aria-label="Search developers">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search developers..." aria-label="Search developers">
+                    <span class="slash">/</span>
+                </label>
+            </div>
         </div>
     </header>
 
-    <!-- Main Sections -->
-    <main class="main">
-
-        <!-- Hero Section -->
-        <section class="hero__section">
-            <div class="hero__part1">
-                <div class="hero__stats">
-                    <p class="hero__stats__text">About DevHub</p>
-                </div>
-
-                <div class="hero__description">
-                    <h1 class="hero__heading">More Than Just a <span class="emerald">Developer Directory</span></h1>
-                    <p class="desc__text">DevHub connects you with talented developers from all over the globe. Explore
-                        profiles, discover projects, and find the perfect developer for your next big Idea.</p>
-                </div>
-
-                <div class="hero__pills">
-
+    <main class="shell main-shell">
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">ABOUT DEVHUB</span>
+                <h1>More Than Just<br><span class="accent">a Developer Directory</span></h1>
+                <p>
+                    DevHub is a modern platform that connects you with talented developers from all around the world.
+                    Discover, explore, and get inspired by amazing people building the future, one project at a time.
+                </p>
+                <div class="tag-row">
+                    <span><i class="fa-solid fa-magnifying-glass"></i> Discover Talent</span>
+                    <span><i class="fa-solid fa-diagram-project"></i> Explore Projects</span>
+                    <span><i class="fa-solid fa-link"></i> Build Connections</span>
                 </div>
             </div>
-            <div class="hero__part2"></div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="visual-card">
+                    <div class="mini-icons">
+                        <span class="mini-icon purple"><i class="fa-solid fa-user"></i></span>
+                        <span class="mini-icon cyan"><i class="fa-solid fa-user"></i></span>
+                        <span class="mini-icon orange"><i class="fa-solid fa-star"></i></span>
+                    </div>
+
+                    <div class="code-window">
+                        <span class="window-line short"></span>
+                        <span class="window-line long"></span>
+                        <span class="window-line med"></span>
+                        <span class="window-line short cyan"></span>
+                        <span class="window-line long purple"></span>
+                    </div>
+
+                    <div class="globe-wrap">
+                        <div class="globe">
+                            <div class="globe-core"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- What is DevHub Section -->
-        <section class="whatIsDevHub__section">
-            <div class="whatIsDevHub__desc"></div>
-            <div class="whatIsDevHub__cards"></div>
-        </section>
-
-        <!-- Mission and Value Section -->
-        <section class="missionAndValue__section">
-            <div class="ourMission">
-
+        <section class="info-panel">
+            <div class="about-copy">
+                <span class="eyebrow small">WHAT IS DEVHUB?</span>
+                <h2>Connecting Developers<br>Across the Globe</h2>
+                <p>
+                    DevHub is built for developers, by developers. Whether you're looking for inspiration, want to collaborate,
+                    or just want to explore amazing talent, we've got you covered. Our platform makes it easy to find and connect
+                    with developers who share your passion.
+                </p>
+                <ul class="check-list">
+                    <li>Real developer data from GitHub</li>
+                    <li>Random developer discovery</li>
+                    <li>Detailed profiles and project showcase</li>
+                    <li>A growing community of creators</li>
+                </ul>
             </div>
 
-            <div class="ourValues">
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>Discover Talent</h3>
+                    <p>Find skilled developers from around the world with just a few clicks.</p>
+                </article>
 
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Explore Projects</h3>
+                    <p>Check out their repositories, see what they can build, and get inspired.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-link"></i></div>
+                    <h3>Build Connections</h3>
+                    <p>Connect with developers, collaborate on projects, and grow your network.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Global Community</h3>
+                    <p>Join a diverse community of developers from every corner of the world.</p>
+                </article>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta__section">
-            <div class="cta__desc">
-                <div class="cta__icon">&#9677;</div>
-                <div class="cta__info">
-                    <h3>Ready to meet your next <span class="emerald">favorite developer?</span></h3>
-                    <p>Click the button below to get a random developer and explore their journey, projects and skills.
-                    </p>
+        <section class="mission-values">
+            <div class="mission-panel">
+                <span class="eyebrow small">OUR MISSION</span>
+                <h2>Empowering Developers,<br>Building Tomorrow</h2>
+                <p>
+                    We believe that great developers create great solutions. Our mission is to provide a simple,
+                    inspiring, and effective platform where developers can be discovered, appreciated, and connected
+                    — no matter where they are in the world.
+                </p>
+                <div class="mission-tag">Better developers. A brighter future.</div>
+            </div>
+
+            <div class="values-panel">
+                <span class="eyebrow small">OUR VALUES</span>
+                <div class="value-list">
+                    <div class="value-item">
+                        <span class="value-icon green"><i class="fa-solid fa-shield-heart"></i></span>
+                        <div>
+                            <h4>Authenticity</h4>
+                            <p>Real people. Real skills. Real projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="value-icon teal"><i class="fa-solid fa-people-group"></i></span>
+                        <div>
+                            <h4>Inclusivity</h4>
+                            <p>Everyone deserves to be seen and heard.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="value-icon violet"><i class="fa-solid fa-lightbulb"></i></span>
+                        <div>
+                            <h4>Innovation</h4>
+                            <p>We're always building for a better experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="value-icon pink"><i class="fa-solid fa-heart"></i></span>
+                        <div>
+                            <h4>Community</h4>
+                            <p>Stronger together.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="cta__btn">
-                <button class="body__cta__btn">Get Random Developer <i class="fa-solid fa-arrow-right"></i></button>
+        </section>
+
+        <section class="stats-strip">
+            <div class="stat-box">
+                <span class="stat-icon users"><i class="fa-solid fa-users"></i></span>
+                <div><strong>10K+</strong><span>Developers</span></div>
             </div>
+            <div class="stat-box">
+                <span class="stat-icon code"><i class="fa-solid fa-code"></i></span>
+                <div><strong>50K+</strong><span>Repositories</span></div>
+            </div>
+            <div class="stat-box">
+                <span class="stat-icon stars"><i class="fa-solid fa-star"></i></span>
+                <div><strong>100K+</strong><span>Stars</span></div>
+            </div>
+            <div class="stat-box">
+                <span class="stat-icon globe"><i class="fa-solid fa-globe"></i></span>
+                <div><strong>150+</strong><span>Countries</span></div>
+            </div>
+        </section>
+
+        <section class="cta-bar">
+            <div class="cta-text">
+                <span class="cta-mark"><i class="fa-solid fa-star"></i></span>
+                <div>
+                    <p>Ready to explore?</p>
+                    <small>Discover amazing developers, check out their projects, and be part of something bigger.</small>
+                </div>
+            </div>
+            <button class="cta-button">Get Random Developer <i class="fa-solid fa-arrow-right"></i></button>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer__desc">
-            <div class="logo">
-                <h2 class="logo__heading"><i class="fa-solid fa-code emerald"></i> Dev<span
-                        class="logo__heading__span">Hub</span>
-                </h2>
+        <div class="shell footer-shell">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-mark">&lt;/&gt;</span>
+                    <span class="logo-word">Dev<span class="logo-accent">Hub</span></span>
+                </div>
+                <p>Connecting talent with opportunity.</p>
+                <div class="socials">
+                    <span><i class="fa-brands fa-github"></i></span>
+                    <span><i class="fa-brands fa-x-twitter"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                </div>
             </div>
-            <p class="footer__desc__text">Your gateway to explore developers and their incredible work.</p>
-        </div>
 
-        <div class="footer__link__cover">
-            <h3>Links</h3>
-            <ul class="footer__links">
-                <li class="footer__link"><a href="index.html">Home</a></li>
-                <li class="footer__link"><a href="developer.html">Developers</a></li>
-                <li class="footer__link emerald"><a href="about.html">About</a></li>
-            </ul>
-        </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="developer.html">Developers</a>
+                <a href="about.html">About</a>
+            </div>
 
-        <div class="footer__link__cover">
-            <h3>Resources</h3>
-            <ul class="footer__links">
-                <li class="footer__link"><a href="#">GitHub API</a></li>
-                <li class="footer__link"><a href="#">Documentation</a></li>
-                <li class="footer__link"><a href="#">Help</a></li>
-            </ul>
-        </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="#">GitHub API</a>
+                <a href="#">Documentation</a>
+                <a href="#">Help</a>
+            </div>
 
-        <div class="footer__link__cover">
-            <h3>Connect</h3>
-            <ul class="footer__links">
-                <li class="footer__link"><a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
-                <li class="footer__link"><a href="#"><i class="fa-brands fa-github"></i> GitHub</a></li>
-                <li class="footer__link"><a href="#"><i class="fa-solid fa-envelope"></i> Email</a></li>
-            </ul>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
         </div>
-
-        <p class="copy__reserved">&copy; 2026 DevHub. All Rights Reserved.</p>
+        <div class="copy">© 2025 DevHub. All rights reserved.</div>
     </footer>
-
-    <script src="js/about.js"></script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>
