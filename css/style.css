@@ -526,11 +526,10 @@ button {
                 }
 
                 & .featuredDev__goInBtn {
-                    padding: 0.5rem 1rem;
+                    padding: 0.8rem;
                     border: 1px solid var(--borders);
                     border-radius: 1rem;
-                    font-size: 1.5rem;
-                    font-weight: 700;
+                    font-size: 1.2rem;
                     background: transparent;
                     color: var(--main_text);
                     cursor: pointer;

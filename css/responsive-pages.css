@@ -1,3 +1,156 @@
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem clamp(1rem, 4vw, 2rem);
+    user-select: none;
+    border-bottom: 2px solid var(--borders);
+    background: var(--surface);
+    box-shadow: 5px 5px 10px var(--surface);
+}
+
+.page-header .logo {
+    flex: 0 0 auto;
+    font-size: 1rem;
+}
+
+.page-header .logo__heading {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.page-header .emerald,
+.page-header .logo__heading__span {
+    color: var(--primary);
+}
+
+.page-header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+    margin-left: 2rem;
+}
+
+.page-header .navbar .nav__link__cover {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+    padding: 1rem;
+    margin-right: 1rem;
+    list-style: none;
+}
+
+.page-header .navbar .nav__link__cover .nav__link {
+    display: inline-block;
+    padding: 1rem 1rem 1.5rem;
+    color: var(--main_text);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 180ms ease;
+}
+
+.page-header .navbar .nav__link__cover .nav__link:hover,
+.page-header .navbar .nav__link__cover .active__nav__link {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    border-radius: 0.1rem;
+}
+
+.page-header .navbar .navbar__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.page-header .navbar .navbar__cta .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 1 18.5rem;
+    width: clamp(11rem, 22vw, 18.5rem);
+    max-width: 18.5rem;
+    min-width: 0;
+    height: 42px;
+    padding: 0 14px 0 42px;
+    border: 1px solid var(--borders);
+    border-radius: 10px;
+    background: var(--cards);
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.page-header .navbar .navbar__cta .search-box:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary_soft);
+}
+
+.page-header .navbar .navbar__cta .search-box i {
+    position: absolute;
+    left: 14px;
+    color: var(--secondary_text);
+    font-size: 0.85rem;
+}
+
+.page-header .navbar .navbar__cta .search-box input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--main_text);
+    font-size: 0.9rem;
+}
+
+.page-header .navbar .navbar__cta .search-box input::placeholder {
+    color: var(--secondary_text);
+}
+
+.page-header .navbar .navbar__cta .slash {
+    display: inline-flex;
+    flex: 0 0 22px;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--borders);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--secondary_text);
+    font-size: 0.78rem;
+}
+
+.page-header .navbar .navbar__cta .nav__cta__btn {
+    flex: 0 0 auto;
+    padding: 0.8rem;
+    border: 2px solid var(--primary);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.page-header .menu__btn__container {
+    display: none;
+}
+
+.page-header .mobile__menu__btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border: 2px solid var(--primary_dark);
+    border-radius: 0.6rem;
+    background: transparent;
+    color: var(--main_text);
+    font-size: 1.6rem;
+}
+
 @media (max-width: 1100px) {
     .header .navbar .nav__link__cover .active__nav__link,
     .header .navbar .nav__link__cover .nav__link:hover {
@@ -65,7 +218,8 @@
         display: block;
     }
 
-    .mobile__menu__btn {
+    .mobile__menu__btn,
+    .page-header .mobile__menu__btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
